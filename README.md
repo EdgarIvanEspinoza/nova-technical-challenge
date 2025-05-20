@@ -36,10 +36,10 @@ git clone https://github.com/EdgarIvanEspinoza/nova-technical-challenge.git
 cd nova-technical-challenge
 
 # 2. Install dependencies
-yarn install
+npm install
 
 # 3. Run the dev server
-yarn run dev
+npm run dev
 ```
 
 Then visit `http://localhost:3000` to view the app.
