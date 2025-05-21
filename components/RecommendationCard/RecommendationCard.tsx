@@ -1,26 +1,16 @@
 import Image from 'next/image';
 import { Card } from '../ui/card';
-
-type user = {
-  name: string;
-  position: string;
-  company: string;
-  image: string;
-};
+import { Recommendation } from '@/types/types';
 
 export const RecommendationCard = ({
   user,
   publicationDate,
   recommendationText,
-}: {
-  user: user;
-  publicationDate: string;
-  recommendationText: string;
-}) => {
+}: Recommendation) => {
   return (
     <Card className="w-full max-h-80 mx-auto p-4 bg-white rounded-lg flex flex-row">
       <Image
-        src={`/photos${user.image}`}
+        src={`${user.image}`}
         alt="User Avatar"
         className="w-16 h-16 rounded-full"
         width={64}

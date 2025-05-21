@@ -2,21 +2,17 @@ import Image from 'next/image';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import { Mail, UserPlus } from 'lucide-react';
-import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
+import { Card, CardFooter, CardHeader } from '../ui/card';
+import { User } from '@/types/types';
 
 type Props = {
-  user: {
-    name: string;
-    position: string;
-    company: string;
-    image: string;
-  };
+  user: User;
 };
 
 export const UserProfileCard = ({ user }: Props) => {
   return (
-    <Card className="w-[350px] h-[300px] text-center">
-      <CardHeader>
+    <Card className="w-full md:max-w-[350px] min-h-[200px] max-h-[300px] text-center">
+      <CardHeader className="flex flex-row md:flex-col items-center justify-center ">
         <Image
           src={`/photos${user.image}`}
           alt="User Avatar"
@@ -24,21 +20,20 @@ export const UserProfileCard = ({ user }: Props) => {
           width={96}
           height={96}
         />
+        <div className="flex flex-col md:items-center items-start justify-center gap-2 basis-[70%]">
+          <h2 className="text-xl font-semibold">{user.name}</h2>
+          <p className="text-gray-600">{user.position}</p>
+          <p className="text-blue-600 font-bold">{user.company}</p>
+        </div>
       </CardHeader>
-      <CardContent>
-        <h2 className="text-xl font-semibold">{user.name}</h2>
-        <p className="text-gray-600">
-          {user.position} at {user.company}
-        </p>
-      </CardContent>
       <CardFooter className="flex gap-4 justify-center">
-        <Button asChild>
+        <Button asChild className="w-[50%]">
           <Link href="/#">
             <UserPlus />
             Connect
           </Link>
         </Button>
-        <Button variant="secondary" asChild>
+        <Button variant="secondary" asChild className="w-[50%]">
           <Link href="/#">
             <Mail />
             Message
