@@ -30,6 +30,6 @@ export const MOCK_RECOMMENDATIONS: Recommendation[] = [
     },
     publicationDate: 'April 10, 2025',
     recommendationText:
-      'I had the pleasure of working with Ivan on several projects. His attention to detail and problem-solving skills are impressive. He is a valuable asset to any team.',
+      'I had the pleasure of working with Ivan on several projects. His attention to detail and problem-solving skills are impressive. He is a valuable asset to any team. I would recommend him without hesitation.',
   },
 ];
