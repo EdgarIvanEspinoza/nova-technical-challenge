@@ -24,9 +24,14 @@ export const RecommendationCard = ({
               {user.position} at {user.company}
             </p>
           </div>
-          <p className="text-sm text-gray-500">{publicationDate}</p>
+          <p className="text-sm hidden md:block text-gray-500">
+            {publicationDate}
+          </p>
         </div>
         <p className="text-gray-800">{recommendationText}</p>
+        <p className="text-sm md:hidden self-start text-gray-500">
+          {publicationDate}
+        </p>
       </div>
     </Card>
   );

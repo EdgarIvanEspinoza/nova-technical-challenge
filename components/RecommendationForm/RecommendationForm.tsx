@@ -48,7 +48,7 @@ export const RecommendationForm = () => {
               className={`w-full h-40 p-2 border rounded resize-none ${
                 errors.recommendation ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder="Write your recommendation here..."
+              placeholder="Write your recommendation (minimum 50 characters)"
               {...register('recommendation', {
                 required: 'This field is required',
                 minLength: {
@@ -58,13 +58,9 @@ export const RecommendationForm = () => {
               })}
               onKeyDown={handleKeyDown}
             />
-            {errors.recommendation ? (
+            {errors.recommendation && (
               <p className="text-sm text-red-500 mt-1">
                 {errors.recommendation.message}
-              </p>
-            ) : (
-              <p className="text-sm text-grey-500 mt-1">
-                {'Minimum 50 characters required'}
               </p>
             )}
           </CardContent>
