@@ -10,7 +10,7 @@ export const RecommendationCard = ({
   return (
     <Card className="w-full max-h-80 mx-auto p-4 bg-white rounded-lg flex flex-row">
       <Image
-        src={`${user.image}`}
+        src={user.image}
         alt="User Avatar"
         className="w-16 h-16 rounded-full"
         width={64}
