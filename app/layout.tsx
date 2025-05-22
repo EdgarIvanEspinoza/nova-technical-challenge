@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './global.css';
-import { HeaderComponent } from '@/components/Header/Header';
+import { Header } from '@/components/Header/Header';
+import { MobileMenuBottom } from '@/components/MobileMenuBottom/MobileMenuBottom';
 
 const geistSans = Roboto({
   variable: '--font-roboto',
@@ -24,8 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} antialiased`}>
         <main className="min-h-screen w-full bg-background">
-          <HeaderComponent />
+          <Header />
           {children}
+          <MobileMenuBottom />
         </main>
       </body>
     </html>

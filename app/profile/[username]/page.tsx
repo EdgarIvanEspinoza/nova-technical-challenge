@@ -1,4 +1,5 @@
-// app/profile/[username]/page.tsx
+'use client';
+
 import { RecommendationCard } from '@/components/RecommendationCard/RecommendationCard';
 import { RecommendationForm } from '@/components/RecommendationForm/RecommendationForm';
 import { UserProfileCard } from '@/components/UserProfileCard/UserProfileCard';

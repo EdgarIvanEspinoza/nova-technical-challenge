@@ -16,7 +16,7 @@ export const UserAvatar = ({
       </div>
       <Avatar>
         <AvatarImage src="/images/profile.png" alt="User Avatar" />
-        <AvatarFallback>U</AvatarFallback>
+        <AvatarFallback>User</AvatarFallback>
       </Avatar>
     </div>
   );

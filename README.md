@@ -21,7 +21,7 @@ Responsive, accessible and mobile-first by design ✅
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
 - **Styling**: [TailwindCSS](https://tailwindcss.com/)
-- **Forms & Validation**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- **Forms & Validation**: [React Hook Form](https://react-hook-form.com/)
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
 - **Type Safety**: TypeScript
 - **State Management**: React state + future optional context/store (maybe Zustand)
