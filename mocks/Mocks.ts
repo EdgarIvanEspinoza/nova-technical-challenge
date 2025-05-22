@@ -15,7 +15,7 @@ export const MOCK_RECOMMENDATIONS: Recommendation[] = [
       name: 'Sarah Johnson',
       position: 'Product Manager',
       company: 'InnovateTech',
-      image: '/random-woman.jpg',
+      image: '/photos/random-woman.jpg',
     },
     publicationDate: 'March 15, 2025',
     recommendationText:
@@ -26,7 +26,7 @@ export const MOCK_RECOMMENDATIONS: Recommendation[] = [
       name: 'John Doe',
       position: 'Software Engineer',
       company: 'Tech Solutions',
-      image: '/random-man.jpg',
+      image: '/photos/random-man.jpg',
     },
     publicationDate: 'April 10, 2025',
     recommendationText:

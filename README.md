@@ -44,13 +44,29 @@ npm run dev
 
 Then visit `http://localhost:3000` to view the app.
 
-## 🧪 Planned Features
+## 🛠️ Potential Improvements and Technical Decisions
 
-- [x] Responsive layout
-- [x] Submit form with validation
-- [x] Display list of recommendations
-- [ ] Mocked logged-in user
-- [ ] Edit/Delete own recommendation (optional)
-- [ ] Unit tests with Vitest/Testing Library
-- [ ] Clean component architecture
-- [ ] Optional e2e with Playwright
+### Technical Decisions
+
+- **UI Library: [shadcn/ui]**  
+  I chose shadcn/ui because of its seamless integration with TailwindCSS and React, accessible design, and modular components that speed up development without sacrificing flexibility. Additionally, since components are installed as separate packages within the project, it facilitates customization and long-term scalability.
+
+- **Client-Side Rendering (`'use client'`)**  
+  Most of the form and component logic runs on the client for fast, interactive experiences. However, to optimize performance and SEO, migrating some components to server-side rendering with React Server Components (`'use server'`) and optimized API calls could be explored.
+
+- **Form Handling with React Hook Form**  
+  React Hook Form is used for efficient form validation and control. It performs well, offers excellent TypeScript support, and keeps the code clean and scalable.
+
+### Potential Improvements
+
+- **API Integration with WebSocket for Real-Time Updates**  
+  Currently, the form submission refreshes locally, but the recommendations list doesn’t update automatically. Implementing a backend with WebSocket would enable real-time events so users can see new recommendations instantly without page reloads.
+
+- **Real-Time Notifications**  
+  Adding immediate visual notifications on submitting or receiving recommendations would enhance user engagement and foster a sense of an active community.
+
+- **Unit and End-to-End Testing**  
+  Including unit tests with Vitest and Testing Library to ensure quality and stability, plus end-to-end tests with Playwright to validate full user flows and prevent regressions in production.
+
+- **Performance Optimization**  
+  Exploring React Server Components and Next.js API Routes to offload heavy operations to the server, reduce client bundle size, and improve load times and SEO.
